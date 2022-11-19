@@ -1,6 +1,6 @@
 
 run:
-	PATH=$PATH:./drivers/ .venv/bin/python -m unittest scenarios/*
+	.venv/bin/python -m unittest scenarios/*
 
 install:
 	sudo apt install python3-venv python3-pip
