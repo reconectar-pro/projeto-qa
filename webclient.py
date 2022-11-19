@@ -31,7 +31,6 @@ class WebClient(object):
 webclient = WebClient()
 
 # TODO: use a config to choose browser
-sys.path.append(str(Path(__name__).absolute().parent / 'drivers'))
-os.environ['PATH'] = ':'.join(sys.path)
+path = str(Path(__name__).absolute().parent / 'drivers' / 'geckodriver')
 
-webclient.open(webdriver.Firefox())
+webclient.open(webdriver.Firefox(executable_path=path))
